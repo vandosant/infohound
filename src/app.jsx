@@ -1,6 +1,12 @@
 var React = require("react");
 
 var App = React.createClass({
+  getInitialState(){
+    return {
+      isActive: "true",
+      id: 0
+    }
+  },
   getDefaultProps(){
     return {
       text: 'this is a default prop',
@@ -11,11 +17,16 @@ var App = React.createClass({
     text: React.PropTypes.string,
     number: React.PropTypes.number.isRequired
   },
+  update(e) {
+    this.setState({isActive: e.target.value})
+  },
   render(){
     return (
       <div>
         <h1>Hello world</h1>
-        <span>{this.props.text}</span>
+        <h3>{this.state.isActive}</h3>
+        <div>{this.props.text}</div>
+        <input type="text" onChange={this.update} />
       </div>
     )
   }
