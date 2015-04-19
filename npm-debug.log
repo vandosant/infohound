@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/sskender/.nvm/versions/node/v0.12.2/bin/node',
+1 verbose cli   '/Users/sskender/.nvm/versions/node/v0.12.2/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'watch' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose stack Error: Failed to parse json
+4 verbose stack Unexpected token 'w' at 15:6
+4 verbose stack     "watch": "watchify -t babelify ./src/app.jsx -o ./dist/bundle.js -v"
+4 verbose stack      ^
+4 verbose stack     at parseError (/Users/sskender/.nvm/versions/node/v0.12.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:406:25)
+4 verbose stack     at parseJson (/Users/sskender/.nvm/versions/node/v0.12.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:86:51)
+4 verbose stack     at /Users/sskender/.nvm/versions/node/v0.12.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:60:33
+4 verbose stack     at evalmachine.<anonymous>:334:14
+4 verbose stack     at /Users/sskender/.nvm/versions/node/v0.12.2/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+4 verbose stack     at FSReqWrap.oncomplete (evalmachine.<anonymous>:95:15)
+5 verbose cwd /Users/sskender/projects/infohound
+6 error Darwin 13.4.0
+7 error argv "/Users/sskender/.nvm/versions/node/v0.12.2/bin/node" "/Users/sskender/.nvm/versions/node/v0.12.2/bin/npm" "run" "watch"
+8 error node v0.12.2
+9 error npm  v2.7.4
+10 error file /Users/sskender/projects/infohound/package.json
+11 error code EJSONPARSE
+12 error Failed to parse json
+12 error Unexpected token 'w' at 15:6
+12 error     "watch": "watchify -t babelify ./src/app.jsx -o ./dist/bundle.js -v"
+12 error      ^
+13 error File: /Users/sskender/projects/infohound/package.json
+14 error Failed to parse package.json data.
+14 error package.json must be actual JSON, not just JavaScript.
+14 error
+14 error This is not a bug in npm.
+14 error Tell the package author to fix their package.json file. JSON.parse
+15 verbose exit [ 1, true ]

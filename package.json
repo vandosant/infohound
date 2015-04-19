@@ -1,0 +1,27 @@
+{
+  "name": "infohound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.8",
+    "watchify": "^3.1.1",
+    "react": "^0.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify -t babelify ./src/app.jsx -o ./dist/bundle.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vandosant/infohound.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vandosant/infohound/issues"
+  },
+  "homepage": "https://github.com/vandosant/infohound"
+}
