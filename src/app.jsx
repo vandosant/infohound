@@ -24,9 +24,21 @@ var App = React.createClass({
     return (
       <div>
         <h1>Hello world</h1>
-        <h3>{this.state.isActive}</h3>
-        <div>{this.props.text}</div>
-        <input type="text" onChange={this.update} />
+        <Binder text={this.state.isActive} update={this.update} />
+        <Binder text={this.state.isActive} update={this.update} />
+        <Binder text={this.state.isActive} update={this.update} />
+        <Binder text={this.state.isActive} update={this.update} />
+      </div>
+    )
+  }
+});
+
+var Binder = React.createClass({
+  render(){
+    return (
+      <div>
+        <h3>{this.props.text}</h3>
+        <input type="text" onChange={this.props.update} />
       </div>
     )
   }
