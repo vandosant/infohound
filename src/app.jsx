@@ -3,8 +3,11 @@ var React = require("react");
 var App = React.createClass({
   getInitialState(){
     return {
-      isActive: "true",
-      id: 0
+      id: 0,
+      first:"first",
+      second:"second",
+      third:"third",
+      fourth:"fourth"
     }
   },
   getDefaultProps(){
@@ -18,16 +21,24 @@ var App = React.createClass({
     number: React.PropTypes.number.isRequired
   },
   update(e) {
-    this.setState({isActive: e.target.value})
+    this.setState({
+      first: this.refs.first.refs.inp.getDOMNode().value,
+      second: this.refs.second.refs.inp.getDOMNode().value,
+      third: this.refs.third.refs.inp.getDOMNode().value,
+      fourth: this.refs.fourth.refs.inp.getDOMNode().value
+    })
   },
   render(){
     return (
       <div>
-        <h1>Hello world</h1>
-        <Binder text={this.state.isActive} update={this.update} />
-        <Binder text={this.state.isActive} update={this.update} />
-        <Binder text={this.state.isActive} update={this.update} />
-        <Binder text={this.state.isActive} update={this.update} />
+        <Binder ref="first" update={this.update} />
+        <label>{this.state.first}</label>
+        <Binder ref="second" update={this.update} />
+        <label>{this.state.second}</label>
+        <Binder ref="third" update={this.update} />
+        <label>{this.state.third}</label>
+        <Binder ref="fourth" update={this.update} />
+        <label>{this.state.fourth}</label>
       </div>
     )
   }
@@ -37,8 +48,7 @@ var Binder = React.createClass({
   render(){
     return (
       <div>
-        <h3>{this.props.text}</h3>
-        <input type="text" onChange={this.props.update} />
+        <input ref="inp" type="text" onChange={this.props.update} />
       </div>
     )
   }
