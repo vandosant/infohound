@@ -39,6 +39,8 @@ var App = React.createClass({
         <label>{this.state.third}</label>
         <Binder ref="fourth" update={this.update} />
         <label>{this.state.fourth}</label>
+        <br />
+        <Button>React <Text /></Button>
       </div>
     )
   }
@@ -51,6 +53,18 @@ var Binder = React.createClass({
         <input ref="inp" type="text" onChange={this.props.update} />
       </div>
     )
+  }
+});
+
+var Button = React.createClass({
+  render(){
+    return <button>{this.props.children}</button>
+  }
+});
+
+var Text = React.createClass({
+  render(){
+    return <span>Rules</span>
   }
 });
 
