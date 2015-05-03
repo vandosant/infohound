@@ -20,7 +20,7 @@ var App = React.createClass({
     text: React.PropTypes.string,
     number: React.PropTypes.number.isRequired
   },
-  update(e) {
+  update() {
     this.setState({
       first: this.refs.first.refs.inp.getDOMNode().value,
       second: this.refs.second.refs.inp.getDOMNode().value,
